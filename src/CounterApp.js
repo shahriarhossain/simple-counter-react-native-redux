@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-import {connect} from 'react-redux';
 
 class CounterApp extends React.Component {
     render() {
@@ -20,20 +19,7 @@ class CounterApp extends React.Component {
     }
 }
 
-function mapStateToProps(state){
-    return {
-        counter : state.counterReducer.counter
-    }
-}
-
-function mapDispatchToProps(dispatch){
-    return {
-        increaseCounter: ()=> {dispatch({type: 'INCREASE_COUNTER'})},
-        decreaseCounter: ()=> {dispatch({type: 'DECREASE_COUNTER'})}
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(CounterApp);
+export default CounterApp;
 
 const styles = StyleSheet.create({
   container: {
