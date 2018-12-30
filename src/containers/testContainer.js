@@ -10,9 +10,8 @@ class TestContainer extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>TestContainer</Text>
+                <Text>Test Container</Text>
                 <Text style={{fontSize:20}}>{this.props.counter}</Text>
-                <Text>z</Text>
             </View>
         );
     }
